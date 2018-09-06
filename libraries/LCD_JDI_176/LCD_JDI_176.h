@@ -39,11 +39,10 @@ class LCD_JDI : public Adafruit_GFX{
   uint8_t   _ss;
   uint16_t  _background;
   uint32_t  _vcom;
-  void sendLineCommand(char* line_cmd, int line);
-  void command_SetState();
-  void drawPixel(int16_t x, int16_t y, uint16_t color);
   char cmd_buf[88];
   char disp_buf[88*176];
+  void sendLineCommand(char* line_cmd, int line);
+  void drawPixel(int16_t x, int16_t y, uint16_t color);
 };
 
 #endif
